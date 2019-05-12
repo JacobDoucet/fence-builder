@@ -1,0 +1,44 @@
+<StackLayout orientation="vertical" padding="10" style="margin-top: 10">
+
+    <ng-container *ngIf="!isLoggedIn">
+
+        <TextField class="input input-border text-center"
+                   hint="Username"
+                   [text]="username"
+                   (textChange)="onTextChange($event, 'username')"
+                   autocorrect="false"
+                   padding="10"></TextField>
+
+        <TextField class="input input-border text-center"
+                   secure="true"
+                   hint="Password"
+                   [text]="password"
+                   (textChange)="onTextChange($event, 'password')"
+                   autocorrect="false"
+                   padding="10"></TextField>
+        
+        <Button text="Login" class="btn-primary" width="200" margin="8" (tap)="login()"></Button>
+
+        <ng-container *ngIf="showConfirmPassword">
+
+            <Label class="action-bar-title text-danger text-center"
+                   text="Confirm password"></Label>
+
+            <TextField class="input input-border text-center"
+                       secure="true"
+                       hint="Confirm password"
+                       [text]="confirmPassword"
+                       (textChange)="onTextChange($event, 'confirmPassword')"
+                       autocorrect="false"
+                       padding="10"></TextField>
+
+        </ng-container>
+
+        <Button text="Register" class="btn" width="200" margin="8" (tap)="register()"></Button>
+        
+        <Label class="action-bar-title text-danger text-center"
+               [text]="message"></Label>
+
+    </ng-container>
+
+</StackLayout>

@@ -1,0 +1,45 @@
+<StackLayout orientation="horizontal" width="100%" horizontalAlignment="center" backgroundColor="#d3d3d3">
+
+    <StackLayout
+        class="length-input-container"
+        orientation="horizontal"
+        paddingTop="10">
+
+        <TextField
+                hint="0"
+                autocorrect="false"
+                text="{{feet}}"
+                (textChange)="changeDistance($event, 'feet')"
+                padding="10"
+                marginRight="0"
+                marginBottom="0"
+                keyboardType="number"
+                class="h1 input text-center"></TextField>
+        <Label text="ft"
+               color="#696969"
+               marginTop="10"
+               padding="10"
+               marginLeft="0"
+               marginBottom="0"
+               class="h2"></Label>
+        <TextField
+                hint="0"
+                autocorrect="false"
+                text="{{inches}}"
+                (textChange)="changeDistance($event, 'inches')"
+                padding="10"
+                marginRight="0"
+                marginBottom="0"
+                keyboardType="number"
+                class="h1 input text-center"></TextField>
+        <Label text="inches"
+               color="#696969"
+               marginTop="10"
+               padding="10"
+               marginLeft="0"
+               marginBottom="0"
+               class="h2"></Label>
+
+    </StackLayout>
+
+</StackLayout>

@@ -1,0 +1,37 @@
+<ng-container *ngIf="isLoggedIn">
+    <ScrollView>
+        <StackLayout padding="10" paddingTop="25">
+            <Label class="label" text="Name" textWrap="true"></Label>
+            <TextField hint="First" autocorrect="false" [text]="first_name" (textChange)="onTextChange($event, 'first_name')" padding="5" class="input input-border"></TextField>
+            <TextField hint="Last" autocorrect="false" [text]="last_name" (textChange)="onTextChange($event, 'last_name')" padding="5" class="input input-border"></TextField>
+
+            <Label class="label" text="" textWrap="true" padding="5"></Label>
+
+            <Label class="label" padding="5" text="Phone Number" textWrap="true"></Label>
+            <TextField hint="" autocorrect="false" [text]="phone" keyboardType="phone" (textChange)="onTextChange($event, 'phone')" padding="5" class="input input-border"></TextField>
+            
+            <Label class="label" padding="5" text="Email" textWrap="true"></Label>
+            <TextField hint="" autocorrect="false" [text]="email" keyboardType="email" (textChange)="onTextChange($event, 'email')" padding="5" class="input input-border"></TextField>
+            
+            <Label class="label" text="" textWrap="true" padding="5"></Label>
+
+            <Label class="label" text="Address" textWrap="true"></Label>
+            <TextField hint="Line 1" autocorrect="false" [text]="address_line_1" (textChange)="onTextChange($event, 'address_line_1')" padding="5" class="input input-border"></TextField>
+            <TextField hint="Line 2" autocorrect="false" [text]="address_line_2" (textChange)="onTextChange($event, 'address_line_2')" padding="5" class="input input-border"></TextField>
+            <TextField hint="City" autocorrect="false" [text]="city" (textChange)="onTextChange($event, 'city')" padding="5" class="input input-border"></TextField>
+            <TextField hint="Province" autocorrect="false" [text]="state" (textChange)="onTextChange($event, 'state')" padding="5" class="input input-border"></TextField>
+            <TextField hint="Zip" autocorrect="false" [text]="zip" (textChange)="onTextChange($event, 'zip')" padding="5" class="input input-border"></TextField>   
+        
+            <Label [text]="saveDataMessage" class="text-center"></Label>
+            <Label [text]="userLabel" class="text-center"></Label>
+            <Button text="Logout" class="btn text-dark" width="100" margin="8" (tap)="logout()"></Button>
+
+            <Label height="225"></Label>
+        </StackLayout>
+    </ScrollView>
+</ng-container>
+
+
+<ng-container *ngIf="!isLoggedIn">
+    <Login></Login>
+</ng-container>

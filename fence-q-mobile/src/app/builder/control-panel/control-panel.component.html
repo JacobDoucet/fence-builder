@@ -1,0 +1,109 @@
+<Button class="btn fas"
+        text="&#xf57d;"
+        verticalAlignment="top"
+        horizontalAlignment="left"
+        height="50"
+        width="75"
+        marginTop="7"
+        marginLeft="7"
+        (tap)="toggleMapType()"></Button>
+
+<Button class="btn fas"
+        [class.selected]="searchActive$ | async"
+        text="&#xf689;"
+        verticalAlignment="top"
+        horizontalAlignment="left"
+        height="50"
+        width="75"
+        marginTop="7"
+        marginLeft="90"
+        (tap)="toggleSearch()"></Button>
+
+<Button class="btn fas"
+        text="&#xf2ea;"
+        verticalAlignment="top"
+        horizontalAlignment="right"
+        height="50"
+        width="75"
+        (tap)="clickReset()">
+</Button>
+
+<ng-container *ngIf="markerActive$ | async">
+
+    <Button class="btn btn-danger fas"
+            text="&#xf2ed;"
+            verticalAlignment="top"
+            horizontalAlignment="right"
+            height="50"
+            width="75"
+            marginTop="75"
+            (tap)="clickDelete()">
+    </Button>
+
+</ng-container>
+
+<SearchBar *ngIf="searchActive$ | async"
+    verticalAlignment="top"
+    marginTop="64"
+    class="search-bar"
+    height="50"></SearchBar>
+
+<ng-container *ngIf="!(markerActive$ | async)">
+
+    <Button class="btn btn-lg fas"
+            text="&#xf546;"
+            [class.selected]="nodeActive$ | async"
+            verticalAlignment="bottom"
+            horizontalAlignment="left"
+            width="25%"
+            height="75"
+            (tap)="toggleNode()">
+    </Button>
+
+    <Button class="btn btn-lg fas"
+            color="#42b9f4"
+            text="&#xf124;"
+            verticalAlignment="bottom"
+            horizontalAlignment="center"
+            width="30%"
+            height="75"
+            [disabled]="loading$ | async"
+            (tap)="getCurrentLocation()"></Button>
+
+    <Button class="btn btn-lg fas"
+            text="&#xf52b;"
+            [class.selected]="gateActive$ | async"
+            verticalAlignment="bottom"
+            horizontalAlignment="right"
+            width="25%"
+            height="75"
+            (tap)="toggleGate()">
+    </Button>
+
+</ng-container>
+
+<ng-container *ngIf="markerActive$ | async">
+
+    <Button class="btn btn-lg fas"
+            color="#42b9f4"
+            text="&#xf0a8;"
+            [class.selected]="nodeActive$ | async"
+            verticalAlignment="bottom"
+            horizontalAlignment="left"
+            width="40%"
+            height="75"
+            (tap)="moveMarker(-1)">
+    </Button>
+
+    <Button class="btn btn-lg fas"
+            color="#42b9f4"
+            text="&#xf0a9;"
+            [class.selected]="gateActive$ | async"
+            verticalAlignment="bottom"
+            horizontalAlignment="right"
+            width="40%"
+            height="75"
+            (tap)="moveMarker(1)">
+    </Button>
+
+</ng-container>

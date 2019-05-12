@@ -1,0 +1,12 @@
+{
+  "type": "postgres",
+  "host": "localhost",
+  "port": 5431,
+  "username": "fenceq-api",
+  "password": "e8vFEGCIBfk5N78J",
+  "database": "fence-q-prod",
+  "entities": [
+       "dist/models/*.model.js"
+   ],
+   "synchronize": true
+}

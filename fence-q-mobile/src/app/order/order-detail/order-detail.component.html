@@ -1,0 +1,11 @@
+<StackLayout>
+
+    <Button text="Back" margin="10"
+            (tap)="onDeselect()"></Button>
+
+    <OrderPreview [order]="order"></OrderPreview>
+
+    <Button text="Place Inquiry" margin="10"
+            (tap)="onPlaceOrder()" class="btn-primary"></Button>
+
+</StackLayout>

@@ -1,0 +1,24 @@
+<TabView tabBackgroundColor="#d3d3d3"
+         tabTextColor="black"
+         paddingTop="20"
+         selectedIndex="1"
+         androidTabsPosition="top"
+         iosIconRenderingMode="alwaysOriginal"
+         (tap)="onTap()">
+
+    <page-router-outlet
+        *tabItem="{title: customerTabTitle, iconSource: customerTabIcon }"
+        name="customerTab">
+    </page-router-outlet>
+
+    <page-router-outlet
+            *tabItem="{title: 'Mapper', iconSource: customerMapperIcon }"
+            name="builderTab">
+    </page-router-outlet>
+
+    <page-router-outlet
+            *tabItem="{title: 'Quotes', iconSource: customerQuotesIcon }"
+            name="orderTab">
+    </page-router-outlet>
+
+</TabView>

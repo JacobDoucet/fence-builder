@@ -1,0 +1,112 @@
+{
+  "data": [
+    {
+      "id": "d1680a58-aea6-485b-8acc-f6b844b721fb",
+      "created": "2019-03-30T21:41:40.045Z",
+      "updated": "2019-03-30T21:41:40.045Z",
+      "quantity": 5,
+      "message": null,
+      "status": "none",
+      "fence": {
+        "id": "08d64149-8eaa-4511-ba00-b1bbfe2b3c01",
+        "name": "Picket",
+        "price": 15,
+        "image_url": "www.google.ca",
+        "description": "Some description about the fence..."
+      },
+      "customer": {
+        "first_name": "Jacob",
+        "last_name": "Doucet",
+        "address_line_1": "303 Washmill Lake Drive",
+        "address_line_2": "",
+        "city": "Halifax",
+        "state": "NS",
+        "zip": "B3S0J3",
+        "phone": "9026709338",
+        "email": "lawson.doucet@gmail.com"
+      },
+      "fenceBlueprints": []
+    },
+    {
+      "id": "d1680a58-aea6-485b-8acc-f6b844b721fb",
+      "created": "2019-03-30T21:41:40.045Z",
+      "updated": "2019-03-30T21:41:40.045Z",
+      "quantity": 5,
+      "message": null,
+      "status": "none",
+      "fence": {
+        "id": "08d64149-8eaa-4511-ba00-b1bbfe2b3c01",
+        "name": "Picket",
+        "price": 15,
+        "image_url": "www.google.ca",
+        "description": "Some description about the fence..."
+      },
+      "customer": {
+        "first_name": "Jacob",
+        "last_name": "Doucet",
+        "address_line_1": "",
+        "address_line_2": "",
+        "city": "",
+        "state": "",
+        "zip": "",
+        "phone": "",
+        "email": "lawson.doucet@gmail.com"
+      },
+      "fenceBlueprints": []
+    },
+    {
+      "id": "d1680a58-aea6-485b-8acc-f6b844b721fb",
+      "created": "2019-03-30T21:41:40.045Z",
+      "updated": "2019-03-30T21:41:40.045Z",
+      "quantity": 5,
+      "message": null,
+      "status": "none",
+      "fence": {
+        "id": "08d64149-8eaa-4511-ba00-b1bbfe2b3c01",
+        "name": "Picket",
+        "price": 15,
+        "image_url": "www.google.ca",
+        "description": "Some description about the fence..."
+      },
+      "customer": {
+        "first_name": "Jacob",
+        "last_name": "Doucet",
+        "address_line_1": "303 Washmill Lake Drive",
+        "address_line_2": "",
+        "city": "Halifax",
+        "state": "NS",
+        "zip": "B3S0J3",
+        "phone": "",
+        "email": "lawson.doucet@gmail.com"
+      },
+      "fenceBlueprints": []
+    },
+    {
+      "id": "d1680a58-aea6-485b-8acc-f6b844b721fb",
+      "created": "2019-03-30T21:41:40.045Z",
+      "updated": "2019-03-30T21:41:40.045Z",
+      "quantity": 5,
+      "message": null,
+      "status": "none",
+      "fence": {
+        "id": "08d64149-8eaa-4511-ba00-b1bbfe2b3c01",
+        "name": "Picket",
+        "price": 15,
+        "image_url": "www.google.ca",
+        "description": "Some description about the fence..."
+      },
+      "customer": {
+        "first_name": "Jacob",
+        "last_name": "Doucet",
+        "address_line_1": "303 Washmill Lake Drive",
+        "address_line_2": "",
+        "city": "Halifax",
+        "state": "",
+        "zip": "",
+        "phone": "9026709338",
+        "email": "lawson.doucet@gmail.com"
+      },
+      "fenceBlueprints": []
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+<ng-container *ngIf="!foreignKey">
+    {{ label }} <input type="text" [(ngModel)]="entity[key]" [disabled]="disabled"/>
+</ng-container>
+
+<ng-container *ngIf="!!foreignKey">
+    <select [(ngModel)]="entity[key]">
+        <option [value]="null">Select an option...</option>
+        <option *ngFor="let option of (foreignKey.resource$() | async)"
+                [value]="option.id">
+            {{ foreignKey.label(option) }}
+        </option>
+    </select>
+</ng-container>

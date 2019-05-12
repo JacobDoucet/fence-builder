@@ -1,0 +1,18 @@
+
+ <MapView #mapView
+    [latitude]="latitude"
+    [longitude]="longitude"
+    [zoom]="zoom"
+    [bearing]="bearing"
+    [tilt]="tilt"
+    [minZoom]="minZoom"
+    [maxZoom]="maxZoom"
+    [markers]="markers"
+    (mapReady)="onMapReady($event)"
+    (markerSelect)="onMarkerSelect($event)"
+    (markerBeginDragging)="onMarkerBeginDragging($event)"
+    (markerEndDragging)="onMarkerEndDragging($event)"
+    (markerDrag)="onMarkerDrag($event)"
+    (cameraChanged)="onCameraChanged($event)"
+    (cameraMove)="onCameraMove($event)"
+    (coordinateTapped)="onCoordinateTapped($event)"></MapView>

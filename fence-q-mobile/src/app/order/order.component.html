@@ -1,0 +1,32 @@
+<StackLayout class="page page-content">
+
+    <LengthInput [length]="distance$ | async" (lengthChange)="changeDistance($event)"></LengthInput>
+    <ScrollView>
+        <StackLayout>
+
+            <ng-container *ngIf="PageStatus === BROWSE">
+                <OrderPreview *ngFor="let order of orders"
+                              class="page-placeholder"
+                              [order]="order"
+                              (select)="selectOrder(order)">
+                </OrderPreview>
+            </ng-container>
+
+            <OrderDetail *ngIf="PageStatus === SELECTED"
+                [order]="selectedOrder"
+                (deselect)="selectOrder(null)"
+                (placeOrder)="placeOrder(selectedOrder)"></OrderDetail>
+
+            <OrderSubmitted *ngIf="PageStatus === SUBMITTED"
+                [submittedOrder]="submittedOrder"
+                (dismiss)="PageStatus = BROWSE"></OrderSubmitted>
+
+            <InvalidOrder *ngIf="PageStatus === INVALID"
+                [validationResult]="validationResult"
+                (dismiss)="PageStatus = SELECTED"></InvalidOrder>
+
+        </StackLayout>
+
+    </ScrollView>
+
+</StackLayout>

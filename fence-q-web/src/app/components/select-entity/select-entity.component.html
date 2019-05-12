@@ -1,0 +1,4 @@
+<select class="form-control" [(ngModel)]="selected" (ngModelChange)="selectedChange.emit($event)">
+  <option disabled>Select</option>
+  <option *ngFor="let entity of (store$ | async)" [value]="entity">{{ labelFormatter(entity) }}</option>
+</select>

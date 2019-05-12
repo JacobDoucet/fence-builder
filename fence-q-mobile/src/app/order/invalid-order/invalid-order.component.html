@@ -1,0 +1,22 @@
+<StackLayout padding="20">
+    <Button
+        (tap)="dismiss.emit()"
+        margin="10"
+        text="Back"></Button>
+    <Label
+        class="h1 text-center text-primary"
+        textWrap="true"
+        text="Sorry, your inquiry could not be submitted."></Label>
+    <Label
+        class="h3 text-center"
+        textWrap="true"
+        marginBottom="10"
+        text="We just need a little bit more info:"></Label>
+    <ng-container *ngIf="validationResult">
+        <Label *ngFor="let reason of validationResult.reason"
+           text="{{reason}}"
+           textWrap="true"
+           width="100%"
+           class="text-center"></Label>
+    </ng-container>
+</StackLayout>

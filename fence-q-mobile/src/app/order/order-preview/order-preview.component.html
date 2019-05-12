@@ -1,0 +1,43 @@
+<StackLayout orientation="horizontal" pageTransition="slide"
+             width="100%"
+             marginTop="{{marginTop}}"
+             marginBottom="{{marginBottom}}"
+             marginRight="{{marginRight}}"
+             marginLeft="{{marginLeft}}"
+             paddingTop="{{paddingTop}}"
+             paddingBottom="{{paddingBottom}}"
+             paddingRight="{{paddingRight}}"
+             paddingLeft="{{paddingLeft}}"
+             backgroundColor="{{backgroundColor}}"
+             borderColor="{{borderColor}}"
+             borderRadius="{{borderRadius}}" borderWidth="{{borderWidth}}"
+             (tap)="onTap()" (touch)="onTouch($event)" (swipe)="onSwipe($event)">
+
+    <StackLayout width="30%" paddingRight="20" paddingLeft="0" height="100%">
+        <StackLayout class="image-placeholder" width="100%" height="100%" verticalAlignment="center">
+            <Image width="100%"
+                   height="100"
+                   [src]="imageUrl"></Image>
+        </StackLayout>
+    </StackLayout>
+
+    <StackLayout orientation="vertical"
+                 width="70%">
+
+        <Label [text]="fenceName"
+               class="h3 bold"
+               padding="2"></Label>
+
+        <Label [text]="description"
+               color="#696969"
+               class="h3"
+               textWrap="true"
+               padding="2"></Label>
+
+        <Label [text]="priceLabel"
+               class="h3"
+               padding="3"></Label>
+    </StackLayout>
+
+</StackLayout>
+

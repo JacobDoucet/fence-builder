@@ -1,0 +1,7 @@
+<div class="clr-row">
+    <div class="clr-col-lg-4 clr-col-12" *ngFor="let endpoint of endpoints">
+      <app-crud [endpoint]="endpoint.endpoint"
+                [foreignKeys]="endpoint.foreignKeys"
+                fixed="true"></app-crud>
+    </div>
+</div>

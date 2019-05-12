@@ -1,0 +1,7 @@
+**/node_modules
+**/dist
+__SECRET
+/gcloud/*
+**/app.yaml
+**/gcloud.json
+**/.idea/**

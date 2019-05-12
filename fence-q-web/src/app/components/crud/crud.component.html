@@ -1,0 +1,53 @@
+<div class="card">
+    <div class="card-header">
+        <ng-container *ngIf="!fixed">
+            <input type="text" clrInput [(ngModel)]="selectedEndpoint">
+            <button class="btn btn-primary" (click)="load().subscribe()">SELECT</button>
+        </ng-container>
+        <ng-container *ngIf="fixed">
+            <div class="card-header section-label" (click)="toggleTab('editor')">
+                <h3 class="card-title">
+                    <strong>/{{ endpoint }}</strong>
+                </h3>
+            </div>
+        </ng-container>
+    </div>
+    <div class="card-block">
+        <div class="card-header section-label" (click)="toggleTab('editor')">
+            <h3 class="card-title font-weight-bold">Editor</h3>
+        </div>
+        <div class="card-text" *ngIf="opentabs['editor']">
+            <form *ngFor="let key of keys">
+                <app-input
+                    [entity]="entity"
+                    [key]="key"
+                    [foreignKeys]="foreignKeys"
+                    [disabled]="key ==='id'"></app-input>
+            </form>
+            <br>
+            <button *ngIf="keys.length > 0" class="btn btn-primary" (click)="new()">NEW</button>
+            <button *ngIf="keys.length > 0" class="btn btn-primary" (click)="save()">SAVE</button>
+            <button *ngIf="keys.length > 0" class="btn btn-danger" (click)="delete()">DELETE</button>
+        </div>
+    </div>
+    <div class="card-block">
+        <div class="card-header section-label" (click)="toggleTab('selected')">
+            <h3 class="card-title">Selected</h3>
+        </div>
+        <div class="card-text" *ngIf="opentabs['selected']">
+            <pre>{{ entity | json }}</pre>
+        </div>
+    </div>
+    <div class="card-block">
+        <div class="card-header section-label" (click)="toggleTab('store')">
+            <h3 class="card-title">Data Store</h3>
+        </div>
+        <ng-container *ngIf="opentabs['store']">
+            <div class="card-text"
+                *ngFor="let storeEntity of (store | async)"
+                (click)="select(storeEntity)">
+                <pre>{{ storeEntity | json }}</pre>
+            </div>
+        </ng-container>
+    </div>
+</div>

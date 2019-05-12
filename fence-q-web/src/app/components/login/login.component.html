@@ -1,0 +1,10 @@
+<div class="input-group">
+    <input class="form-control" type="text" [(ngModel)]="username" />
+</div>
+<div class="input-group">
+    <input class="form-control" type="password" [(ngModel)]="password" />
+</div>
+<div class="input-group">
+    <button class="btn btn-outline-primary" (click)="login()">Login</button>
+</div>
+<span class="font-weight-bold text-danger">{{ error }}</span>
